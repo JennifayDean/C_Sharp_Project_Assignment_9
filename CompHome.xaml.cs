@@ -31,19 +31,7 @@ namespace Employees
             RefreshEmployeeList();
         }
 
-        public CompHome(EmployeeList emps) : this()
-        {
-            empList = emps;
 
-            // Select the All radio button
-            this.EmployeeTypeRadioButtons.SelectedIndex = 0;
-
-            // Set event handler for radio button changes
-            this.EmployeeTypeRadioButtons.SelectionChanged += new SelectionChangedEventHandler(EmployeeTypeRadioButtons_SelectionChanged);
-
-            // Fill the Employees data grid
-            dgEmps.ItemsSource = empList;
-        }
 
         #endregion
 
@@ -61,6 +49,33 @@ namespace Employees
         {
             // Check if an Employee is selected to enable Details button
             e.CanExecute = dgEmps.SelectedIndex >= 0;
+        }
+
+        // Handle Expenses button execute
+        private void Expenses_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            // Create Expenses page and navigate to page
+            CompDetails expensePage = new CompDetails(this.dgEmps.SelectedItem);
+            this.NavigationService.Navigate(expensePage);
+
+           
+        }
+
+        // Handle enable/disable of Details button
+        private void Expenses_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            // Check if an Employee is selected to enable Expenses button
+            e.CanExecute = dgEmps.SelectedIndex >= 0;
+
+        }
+
+        private void DExpenses_Click(object sender, RoutedEventArgs e)
+        {
+            // Show Employee details if one selected
+            if (dgEmps.SelectedIndex >= 0)
+            {
+                this.NavigationService.Navigate(new CompDetails(this.dgEmps.SelectedItem));
+            }
         }
 
         // This also works for Button Click property, but does not enable/disable button

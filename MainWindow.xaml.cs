@@ -19,7 +19,7 @@ namespace Employees
 
             this.Closing += MainWindow_Closing;
 
-            this.NavigationService.Navigate(new CompHome(empList));
+            this.NavigationService.Navigate(new CompHome());
         }
 
         private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
