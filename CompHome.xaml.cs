@@ -69,7 +69,7 @@ namespace Employees
 
         }
 
-        private void DExpenses_Click(object sender, RoutedEventArgs e)
+        private void Expenses_Click(object sender, RoutedEventArgs e)
         {
             // Show Employee details if one selected
             if (dgEmps.SelectedIndex >= 0)
