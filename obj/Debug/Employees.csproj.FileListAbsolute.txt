@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 C:\Users\tophg\OneDrive\Education\Spring '18\C# (CSD 228)\Assignments\Assignment 9\bin\Debug\Employees.exe.config
 C:\Users\tophg\OneDrive\Education\Spring '18\C# (CSD 228)\Assignments\Assignment 9\bin\Debug\Employees.exe
 C:\Users\tophg\OneDrive\Education\Spring '18\C# (CSD 228)\Assignments\Assignment 9\bin\Debug\Employees.pdb
@@ -20,7 +19,6 @@ C:\Users\tophg\OneDrive\Education\Spring '18\C# (CSD 228)\Assignments\Assignment
 C:\Users\tophg\OneDrive\Education\Spring '18\C# (CSD 228)\Assignments\Assignment 9\obj\Debug\Employees.csproj.CoreCompileInputs.cache
 C:\Users\tophg\OneDrive\Education\Spring '18\C# (CSD 228)\Assignments\Assignment 9\obj\Debug\Employees.exe
 C:\Users\tophg\OneDrive\Education\Spring '18\C# (CSD 228)\Assignments\Assignment 9\obj\Debug\Employees.pdb
-=======
 =======
 >>>>>>> Jennifay's-Branch
 C:\Users\Jenni\Documents\00 CSD238 C#\Assignments\Assignment9\C_Sharp_Project_Assignment_9\bin\Debug\Employees.exe.config
@@ -43,8 +41,6 @@ C:\Users\Jenni\Documents\00 CSD238 C#\Assignments\Assignment9\C_Sharp_Project_As
 C:\Users\Jenni\Documents\00 CSD238 C#\Assignments\Assignment9\C_Sharp_Project_Assignment_9\obj\Debug\Employees.csproj.CoreCompileInputs.cache
 C:\Users\Jenni\Documents\00 CSD238 C#\Assignments\Assignment9\C_Sharp_Project_Assignment_9\obj\Debug\Employees.exe
 C:\Users\Jenni\Documents\00 CSD238 C#\Assignments\Assignment9\C_Sharp_Project_Assignment_9\obj\Debug\Employees.pdb
-<<<<<<< HEAD
 >>>>>>> master
-=======
 C:\Users\Jenni\Documents\00 CSD238 C#\Assignments\Assignment9\C_Sharp_Project_Assignment_9\obj\Debug\CompExpenses.g.cs
->>>>>>> Jennifay's-Branch
+C:\Users\tophg\OneDrive\Education\Spring '18\C# (CSD 228)\Assignments\Assignment 9\obj\Debug\CompExpenses.g.cs
