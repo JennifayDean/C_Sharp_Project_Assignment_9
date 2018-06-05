@@ -24,7 +24,6 @@ namespace Employees
         public DateTime DateOfBirth { get { return empDOB; } }
         public string SocialSecurityNumber { get { return empSSN; } }
         public virtual string Role { get { return GetType().ToString().Substring(10); } }
-        public List<Expense> Expenses { get; set; } = new List<Expense>();
         #endregion
 
         #region Constructors

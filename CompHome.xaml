@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Employees"
       mc:Ignorable="d" 
       Title="Employee - Home" d:DesignWidth="481.847" d:DesignHeight="267.781" >
-
+    
     <!-- Outer grid -->
     <Grid Margin="10,0,10,10">
         <Grid.ColumnDefinitions>
@@ -39,7 +39,7 @@
                 <ListBoxItem Content="Sales" Style="{StaticResource HorizontalRadio}" MinWidth="50" />
                 <ListBoxItem Content="Other" Style="{StaticResource HorizontalRadio}" />
             </ListBox>
-
+            
             <!-- Employees data grid -->
             <DataGrid  Name="dgEmps" Grid.Row="2" AutoGenerateColumns="False" CanUserAddRows="False" 
                        HeadersVisibility="Column" MouseDoubleClick="Details_DoubleClick">
@@ -51,31 +51,11 @@
                 </DataGrid.Columns>
             </DataGrid>
 
-            <!-- Expenses button -->
-            <Button Content="Expenses" Grid.Row="3" Style="{StaticResource buttonStyle}" Height="Auto" Command="Save" Margin="0,10.2,186.2,-0.4" >
-                <Button.CommandBindings>
-                    <CommandBinding Command="Save" 
-                        Executed="Expenses_Executed" CanExecute="Expenses_CanExecute"/>
-                </Button.CommandBindings>
-            </Button>
-
             <!-- Details button -->
-<<<<<<< HEAD
-            <Button Content="Details" Grid.Row="3" Style="{StaticResource buttonStyle}" Height="Auto" Command="Save" Margin="0,10,0,0" >
-=======
-            <Button Content="Details" Grid.Row="3" Style="{StaticResource buttonStyle}" Height="Auto" Command="Save" Margin="0,10.2,0.2,-0.4" >
->>>>>>> Jennifay's-Branch
+            <Button Content="Details" Grid.Row="4" Style="{StaticResource buttonStyle}" Height="Auto" Command="Save" >
                 <Button.CommandBindings>
                     <CommandBinding Command="Save" 
                         Executed="Details_Executed" CanExecute="Details_CanExecute"/>
-                </Button.CommandBindings>
-            </Button>
-
-            <!-- Expenses button -->
-            <Button Content="Expenses" Grid.Row="3" Style="{StaticResource buttonStyle}" Height="Auto" Command="Save" Margin="0,10,177,0" >
-                <Button.CommandBindings>
-                    <CommandBinding Command="Save" 
-                        Executed="Expenses_Executed" CanExecute="Expenses_CanExecute"/>
                 </Button.CommandBindings>
             </Button>
         </Grid>
