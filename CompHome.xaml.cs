@@ -38,11 +38,33 @@ namespace Employees
             this.NavigationService.Navigate(detailsPage);
         }
 
+        private void Expenses_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            // Create Details page and navigate to page
+            CompExpenses expensesPage = new CompExpenses(this.dgEmps.SelectedItem);
+            this.NavigationService.Navigate(expensesPage);
+        }
+
         // Handle enable/disable of Details button
         private void Details_CanExecute(object sender, CanExecuteRoutedEventArgs e)
         {
             // Check if an Employee is selected to enable Details button
             e.CanExecute = dgEmps.SelectedIndex >= 0;
+        }
+
+        private void Expenses_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            // Check if an Employee is selected to enable Details button
+            e.CanExecute = dgEmps.SelectedIndex >= 0;
+        }
+
+        private void Expenses_Click(object sender, RoutedEventArgs e)
+        {
+            // Show Employee details if one selected
+            if (dgEmps.SelectedIndex >= 0)
+            {
+                this.NavigationService.Navigate(new CompExpenses(this.dgEmps.SelectedItem));
+            }
         }
 
         // This also works for Button Click property, but does not enable/disable button
