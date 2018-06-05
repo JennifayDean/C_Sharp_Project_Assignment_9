@@ -1,5 +1,7 @@
 ﻿// CSD 228 - Assignment 8 Solution - Nat Ballou
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -13,6 +15,7 @@ namespace Employees
     {
         #region Data members
         static EmployeeList empList = EmployeeList.GetEmployees();
+        private CompHome compHome;
         #endregion
 
         #region Constructors
@@ -27,6 +30,21 @@ namespace Employees
             this.optEmployeeType.SelectedIndex = 0;
             RefreshEmployeeList();
         }
+
+        public CompHome(EmployeeList emps) : this()
+        {
+            empList = emps;
+
+            // Select the All radio button
+            this.EmployeeTypeRadioButtons.SelectedIndex = 0;
+
+            // Set event handler for radio button changes
+            this.EmployeeTypeRadioButtons.SelectionChanged += new SelectionChangedEventHandler(EmployeeTypeRadioButtons_SelectionChanged);
+
+            // Fill the Employees data grid
+            dgEmps.ItemsSource = empList;
+        }
+
         #endregion
 
         #region Class methods
@@ -66,6 +84,7 @@ namespace Employees
         {
             RefreshEmployeeList();
         }
+
 
         // Filter Employee list according to radio button setting
         void RefreshEmployeeList()

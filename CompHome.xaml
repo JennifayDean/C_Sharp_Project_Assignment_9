@@ -58,6 +58,14 @@
                         Executed="Details_Executed" CanExecute="Details_CanExecute"/>
                 </Button.CommandBindings>
             </Button>
+
+            <!-- Expenses button -->
+            <Button Content="Details" Grid.Row="3" Grid.Column ="0" Style="{StaticResource buttonStyle}" Height="Auto" Command="Save" Margin="0,10,165,0" >
+                <Button.CommandBindings>
+                    <CommandBinding Command="Save" 
+                        Executed="Expenses_Executed" CanExecute="Expenses_CanExecute"/>
+                </Button.CommandBindings>
+            </Button>
         </Grid>
     </Grid>
 </Page>

@@ -9,7 +9,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 namespace Employees
 {
     [Serializable]
-    class EmployeeList : List<Employee>
+    public class EmployeeList : List<Employee>
     {
         #region Data members
         private const string DataFile = "Employees.dat";
