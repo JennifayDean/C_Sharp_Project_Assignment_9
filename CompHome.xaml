@@ -51,8 +51,20 @@
                 </DataGrid.Columns>
             </DataGrid>
 
+            <!-- Expenses button -->
+            <Button Content="Expenses" Grid.Row="3" Style="{StaticResource buttonStyle}" Height="Auto" Command="Save" Margin="0,10.2,186.2,-0.4" >
+                <Button.CommandBindings>
+                    <CommandBinding Command="Save" 
+                        Executed="Expenses_Executed" CanExecute="Expenses_CanExecute"/>
+                </Button.CommandBindings>
+            </Button>
+
             <!-- Details button -->
+<<<<<<< HEAD
             <Button Content="Details" Grid.Row="3" Style="{StaticResource buttonStyle}" Height="Auto" Command="Save" Margin="0,10,0,0" >
+=======
+            <Button Content="Details" Grid.Row="3" Style="{StaticResource buttonStyle}" Height="Auto" Command="Save" Margin="0,10.2,0.2,-0.4" >
+>>>>>>> Jennifay's-Branch
                 <Button.CommandBindings>
                     <CommandBinding Command="Save" 
                         Executed="Details_Executed" CanExecute="Details_CanExecute"/>

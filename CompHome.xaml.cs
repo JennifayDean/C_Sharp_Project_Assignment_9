@@ -44,6 +44,13 @@ namespace Employees
             this.NavigationService.Navigate(detailsPage);
         }
 
+        private void Expenses_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            // Create Details page and navigate to page
+            CompExpenses expensesPage = new CompExpenses(this.dgEmps.SelectedItem);
+            this.NavigationService.Navigate(expensesPage);
+        }
+
         // Handle enable/disable of Details button
         private void Details_CanExecute(object sender, CanExecuteRoutedEventArgs e)
         {
@@ -51,6 +58,7 @@ namespace Employees
             e.CanExecute = dgEmps.SelectedIndex >= 0;
         }
 
+<<<<<<< HEAD
         // Handle Expenses button execute
         private void Expenses_Executed(object sender, ExecutedRoutedEventArgs e)
         {
@@ -67,6 +75,12 @@ namespace Employees
             // Check if an Employee is selected to enable Expenses button
             e.CanExecute = dgEmps.SelectedIndex >= 0;
 
+=======
+        private void Expenses_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            // Check if an Employee is selected to enable Details button
+            e.CanExecute = dgEmps.SelectedIndex >= 0;
+>>>>>>> Jennifay's-Branch
         }
 
         private void Expenses_Click(object sender, RoutedEventArgs e)
@@ -74,7 +88,11 @@ namespace Employees
             // Show Employee details if one selected
             if (dgEmps.SelectedIndex >= 0)
             {
+<<<<<<< HEAD
                 this.NavigationService.Navigate(new CompDetails(this.dgEmps.SelectedItem));
+=======
+                this.NavigationService.Navigate(new CompExpenses(this.dgEmps.SelectedItem));
+>>>>>>> Jennifay's-Branch
             }
         }
 
