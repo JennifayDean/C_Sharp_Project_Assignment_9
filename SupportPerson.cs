@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Employees
 {
@@ -10,6 +11,8 @@ namespace Employees
     {
         #region Data members
         public ShiftName Shift { get; set; } = ShiftName.One;
+
+        private static string prop1Name = "Shift:";
         #endregion
 
         #region Constructors 
@@ -36,6 +39,13 @@ namespace Employees
         {
             propName  = "Shift:";
             propValue = Shift.ToString();
+        }
+
+        public static string SpareAddProp1Name() { return prop1Name; }
+        public static object SpareAddProp1DefaultValue() { return new List<String> { ShiftName.One.ToString(), ShiftName.Two.ToString(), ShiftName.Three.ToString() }; }
+        public static object SpareAddProp1Convert(object obj)
+        {
+            return (ShiftName)obj;
         }
         #endregion
     }

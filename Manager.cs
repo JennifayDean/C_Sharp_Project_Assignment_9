@@ -15,8 +15,12 @@ namespace Employees
 
         // Stock options unique to Managers
         public int StockOptions { get; set; }
+
+        // Spare prop data
+        private static string prop1Name = "Stock Options:";
+        private static object prop1DefaultValue = 500;
         #endregion
-        
+
         #region Constructors 
         public Manager() { }
 
@@ -47,6 +51,41 @@ namespace Employees
         #endregion
 
         #region Class Methods
+
+        public static string SpareAddProp1Name() { return prop1Name; }
+        public static object SpareAddProp1DefaultValue() { return prop1DefaultValue; }
+
+        // Convert passed value to a valid value
+        public static object SpareAddProp1Convert(object obj)
+        {
+            if (obj is int) return obj;
+            else if (obj is string)
+            {
+                string s = (string)obj;
+                int value;
+
+                if (int.TryParse(s, out value)) return value;
+            }
+
+            return -1;
+        }
+
+        // Return error message if there is error 
+        // else return String.Empty
+        public static string SpareAddProp1Valid(object obj)
+        {
+            if (obj is string)
+            {
+                string s = (string)obj;
+                int value;
+
+                if (int.TryParse(s, out value) && value >= 0 && value <= 10000)
+                    return String.Empty;
+            }
+
+            return "Range is 0 to 100,000";
+        }
+
         // Override GiveBonus to change stock options for Manager
         public override void GiveBonus(float amount)
         {
