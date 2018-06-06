@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Employees
 {
@@ -10,6 +11,8 @@ namespace Employees
     {
         #region Data members
         public DegreeName HighestDegree { get; set; } = DegreeName.BS;
+
+        private static string prop1Name = "Degree:";
         #endregion
 
         #region Constructors 
@@ -38,6 +41,13 @@ namespace Employees
             propValue = HighestDegree.ToString();
         }
 
+        public static string SpareAddProp1Name() { return prop1Name; }
+        public static object SpareAddProp1DefaultValue() { return new List<String> { DegreeName.BS.ToString(), DegreeName.MS.ToString(), DegreeName.PhD.ToString() }; }
+
+        public static object SpareAddProp1Convert(object obj)
+        {
+            return (DegreeName)obj;
+        }
         #endregion
     }
 }

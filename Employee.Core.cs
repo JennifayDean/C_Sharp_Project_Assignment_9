@@ -7,6 +7,8 @@ namespace Employees
     public partial class Employee
     {
         #region Data members and Properties
+        public static int NamespaceLength = 10;
+
         private string empFirstName;
         private string empLastName;
         private int empID;

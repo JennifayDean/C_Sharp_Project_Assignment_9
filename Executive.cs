@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Employees
 {
@@ -10,6 +11,10 @@ namespace Employees
     {
         #region Data members
         public ExecTitle Title { get; set; } = ExecTitle.VP;
+
+        private static string prop1Name = "Stock Options:";
+        private static object prop1DefaultValue = 500;
+        private static string prop2Name = "Title:";
         #endregion
 
         #region Constructors 
@@ -68,6 +73,44 @@ namespace Employees
                 ex.Data.Add("New Report", newReport.Name);
                 throw ex;
             }            
+        }
+
+        public static string SpareAddProp1Name() { return prop1Name; }
+        public static object SpareAddProp1DefaultValue() { return prop1DefaultValue; }
+
+        public static object SpareAddProp1Convert(object obj)
+        {
+            if (obj is int) return obj;
+            else if (obj is string)
+            {
+                string s = (string)obj;
+                int value;
+
+                if (int.TryParse(s, out value)) return value;
+            }
+
+            return -1;
+        }
+
+        public static string SpareAddProp1Valid(object obj)
+        {
+            if (obj is string)
+            {
+                string s = (string)obj;
+                int value;
+
+                if (int.TryParse(s, out value) && value >= 0 && value <= 10000)
+                    return String.Empty;
+            }
+
+            return "Range is 0 to 100,000";
+        }
+
+        public static string SpareAddProp2Name() { return prop2Name; }
+        public static object SpareAddProp2DefaultValue() { return new List<String> { ExecTitle.CEO.ToString(), ExecTitle.CFO.ToString(), ExecTitle.CTO.ToString(), ExecTitle.VP.ToString() }; }
+        public static object SpareAddProp2Convert(object obj)
+        {
+            return (ExecTitle)obj;
         }
         #endregion
     }

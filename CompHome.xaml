@@ -18,6 +18,19 @@
         <Image Style="{StaticResource WatermarkImage}" Grid.Column="0" Grid.Row="0" 
                Height="156" Grid.RowSpan="3" Width="181" Grid.ColumnSpan="1" />
 
+        <Grid Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="130"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition MaxHeight="120" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Button Content="Add Employee" Grid.Column="0" Grid.Row="1" Style="{StaticResource buttonStyle}" Height="Auto" Click="AddEmployee_Click" />
+        </Grid>
+
         <!-- Employees grid -->
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>

@@ -68,7 +68,7 @@ namespace Employees
         }
 
         // Filter Employee list according to radio button setting
-        void RefreshEmployeeList()
+        public void RefreshEmployeeList()
         {
             // Apply the selection
             switch (this.optEmployeeType.SelectedIndex)
@@ -93,6 +93,12 @@ namespace Employees
             }
 
             dgEmps.Items.Refresh();
+        }
+
+        // Handle Add employee button click
+        private void AddEmployee_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new CompAddEmployee(this, empList));
         }
         #endregion
     }
