@@ -19,3 +19,5 @@ C:\Users\Jenni\Documents\00 CSD238 C#\Assignments\Assignment9\C_Sharp_Project_As
 C:\Users\Jenni\Documents\00 CSD238 C#\Assignments\Assignment9\C_Sharp_Project_Assignment_9\obj\Debug\Employees.exe
 C:\Users\Jenni\Documents\00 CSD238 C#\Assignments\Assignment9\C_Sharp_Project_Assignment_9\obj\Debug\Employees.pdb
 C:\Users\Jenni\Documents\00 CSD238 C#\Assignments\Assignment9\C_Sharp_Project_Assignment_9\obj\Debug\CompExpenses.g.cs
+C:\Users\Jenni\Documents\00 CSD238 C#\Assignments\Assignment9\C_Sharp_Project_Assignment_9\obj\Debug\CompExpenses.baml
+C:\Users\Jenni\Documents\00 CSD238 C#\Assignments\Assignment9\C_Sharp_Project_Assignment_9\obj\Debug\GeneratedInternalTypeHelper.g.cs

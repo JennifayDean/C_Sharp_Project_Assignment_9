@@ -61,7 +61,7 @@
     <Compile Include="CompHome.xaml.cs">
       <DependentUpon>CompHome.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Expenses.cs" />
+    <Compile Include="Expense.cs" />
     <Compile Include="PTSalesPerson.cs" />
     <Compile Include="SalesPerson.cs" />
     <Compile Include="SupportPerson.cs" />
