@@ -43,6 +43,10 @@ namespace Employees
 
         public static string SpareAddProp1Name() { return prop1Name; }
         public static object SpareAddProp1DefaultValue() { return new List<String> { ShiftName.One.ToString(), ShiftName.Two.ToString(), ShiftName.Three.ToString() }; }
+        public static object SpareAddProp1Convert(object obj)
+        {
+            return (ShiftName)obj;
+        }
         #endregion
     }
 }

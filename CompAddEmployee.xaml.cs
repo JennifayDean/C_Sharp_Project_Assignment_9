@@ -225,7 +225,7 @@ namespace Employees
         private void Save_Executed(object sender, ExecutedRoutedEventArgs e)
         {
             Type t = empTypes[RoleComboBox.SelectedIndex];
-            ArrayList args = new ArrayList() { FirstName, LastName, DOB, SSN, Pay };
+            ArrayList args = new ArrayList() { FirstName, LastName, DOB, Pay, SSN };
 
             if (SpareProp1Name.IsVisible)
             {

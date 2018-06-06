@@ -108,6 +108,10 @@ namespace Employees
 
         public static string SpareAddProp2Name() { return prop2Name; }
         public static object SpareAddProp2DefaultValue() { return new List<String> { ExecTitle.CEO.ToString(), ExecTitle.CFO.ToString(), ExecTitle.CTO.ToString(), ExecTitle.VP.ToString() }; }
+        public static object SpareAddProp2Convert(object obj)
+        {
+            return (ExecTitle)obj;
+        }
         #endregion
     }
 }
