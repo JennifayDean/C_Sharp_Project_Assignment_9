@@ -1,7 +1,0 @@
-C:\Users\tophg\OneDrive\Education\Spring '18\C# (CSD 228)\Assignments\Assignment 9\obj\Debug\CompDetails.g.cs
-C:\Users\tophg\OneDrive\Education\Spring '18\C# (CSD 228)\Assignments\Assignment 9\obj\Debug\CompHome.g.cs
-C:\Users\tophg\OneDrive\Education\Spring '18\C# (CSD 228)\Assignments\Assignment 9\obj\Debug\MainWindow.g.cs
-C:\Users\tophg\OneDrive\Education\Spring '18\C# (CSD 228)\Assignments\Assignment 9\obj\Debug\App.g.cs
-C:\Users\tophg\OneDrive\Education\Spring '18\C# (CSD 228)\Assignments\Assignment 9\obj\Debug\Employees_MarkupCompile.cache
-C:\Users\tophg\OneDrive\Education\Spring '18\C# (CSD 228)\Assignments\Assignment 9\obj\Debug\Employees_MarkupCompile.lref
-C:\Users\tophg\OneDrive\Education\Spring '18\C# (CSD 228)\Assignments\Assignment 9\obj\Debug\Employees.csprojAssemblyReference.cache
