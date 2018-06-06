@@ -1,7 +1,5 @@
 ﻿// CSD 228 - Assignment 8 Solution - Nat Ballou
-using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -15,7 +13,6 @@ namespace Employees
     {
         #region Data members
         static EmployeeList empList = EmployeeList.GetEmployees();
-        private CompHome compHome;
         #endregion
 
         #region Constructors
@@ -30,9 +27,6 @@ namespace Employees
             this.optEmployeeType.SelectedIndex = 0;
             RefreshEmployeeList();
         }
-
-
-
         #endregion
 
         #region Class methods
@@ -49,33 +43,6 @@ namespace Employees
         {
             // Check if an Employee is selected to enable Details button
             e.CanExecute = dgEmps.SelectedIndex >= 0;
-        }
-
-        // Handle Expenses button execute
-        private void Expenses_Executed(object sender, ExecutedRoutedEventArgs e)
-        {
-            // Create Expenses page and navigate to page
-            CompDetails expensePage = new CompDetails(this.dgEmps.SelectedItem);
-            this.NavigationService.Navigate(expensePage);
-
-           
-        }
-
-        // Handle enable/disable of Details button
-        private void Expenses_CanExecute(object sender, CanExecuteRoutedEventArgs e)
-        {
-            // Check if an Employee is selected to enable Expenses button
-            e.CanExecute = dgEmps.SelectedIndex >= 0;
-
-        }
-
-        private void Expenses_Click(object sender, RoutedEventArgs e)
-        {
-            // Show Employee details if one selected
-            if (dgEmps.SelectedIndex >= 0)
-            {
-                this.NavigationService.Navigate(new CompDetails(this.dgEmps.SelectedItem));
-            }
         }
 
         // This also works for Button Click property, but does not enable/disable button
@@ -100,9 +67,8 @@ namespace Employees
             RefreshEmployeeList();
         }
 
-
         // Filter Employee list according to radio button setting
-        void RefreshEmployeeList()
+        public void RefreshEmployeeList()
         {
             // Apply the selection
             switch (this.optEmployeeType.SelectedIndex)
@@ -127,6 +93,12 @@ namespace Employees
             }
 
             dgEmps.Items.Refresh();
+        }
+
+        // Handle Add employee button click
+        private void AddEmployee_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new CompAddEmployee(this, empList));
         }
         #endregion
     }
