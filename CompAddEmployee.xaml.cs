@@ -6,6 +6,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.ComponentModel;
 using System.Reflection;
+using System.Text.RegularExpressions;
 
 namespace Employees
 {
@@ -78,6 +79,12 @@ namespace Employees
                         validationMessage = "Must be 21 or older";
                     else if (_DOB < DateTime.Now.AddYears(-65))
                         validationMessage = "Must be 65 or younger";
+                    break;
+
+                case "SSN":
+                    Regex rgx = new Regex(@"\d{3}[-]\d{2}[-]\d{4}");
+                    if (SSN != null && !rgx.IsMatch(SSN))
+                        validationMessage = "SSN must be in XXX-XX-XXXX format";
                     break;
 
                 case "Spare1Value":
@@ -193,7 +200,7 @@ namespace Employees
         private void Save_CanExecute(object sender, CanExecuteRoutedEventArgs e)
         {
             e.CanExecute = !String.IsNullOrWhiteSpace(FirstName) && !String.IsNullOrWhiteSpace(LastName) &&
-                !Validation.GetHasError(DOBDateBox) && !Validation.GetHasError(SpareProp1Value);
+                !Validation.GetHasError(DOBDateBox) && !Validation.GetHasError(SpareProp1Value) && !Validation.GetHasError(SSNBox) && !Validation.GetHasError(SpareProp2Value);
         }
 
         // Return error message if there is error on else return empty or null string
